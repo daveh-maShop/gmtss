@@ -1,0 +1,98 @@
+{
+  "id": "gmtss_member_categories_v2",
+  "doc_type": "gmtss_config",
+  "categories": {
+
+    "1": {
+      "name": "GMTSS COORDINATORS",
+      "active_status": "1",
+      "last_changed_by": "SUEA",
+      "last_changed_date": "12/12/2016",
+      "last_changed_time": "13:26",
+      "category_abbreviation": "",
+      "category_name_spa": "",
+      "category_abbreviation_spa": ""
+    },
+    "2": {
+      "name": "SPEAKERS BUREAU",
+      "active_status": "1",
+      "last_changed_by": "CHRISTIANS",
+      "last_changed_date": "04/24/2017",
+      "last_changed_time": "17:49",
+      "category_name_spa": "",
+      "category_abbreviation_spa": ""
+    },
+    "3": {
+      "name": "GENERAL TRAINING ENG",
+      "active_status": "1",
+      "last_changed_by": "SUEA",
+      "last_changed_date": "12/12/2016",
+      "last_changed_time": "13:27",
+      "category_name_spa": "",
+      "category_abbreviation_spa": ""
+    },
+    "4": {
+      "name": "OVERVIEW TRAINING",
+      "active_status": "1",
+      "last_changed_by": "SUEA",
+      "last_changed_date": "12/12/2016",
+      "last_changed_time": "13:26",
+      "category_name_spa": "",
+      "category_abbreviation_spa": ""
+    },
+    "5": {
+      "name": "SPECIALIZED TRAINING",
+      "active_status": "1",
+      "last_changed_by": "SUEA",
+      "last_changed_date": "12/12/2016",
+      "last_changed_time": "13:25",
+      "category_name_spa": "",
+      "category_abbreviation_spa": ""
+    },
+    "6": {
+      "name": "NO MEMER TYPES",
+      "active_status": "0",
+      "last_changed_by": "SUEA",
+      "last_changed_date": "08/12/2016",
+      "last_changed_time": "13:50",
+      "category_name_spa": "",
+      "category_abbreviation_spa": ""
+    },
+    "9": {
+      "name": "NEW CAT",
+      "active_status": "1",
+      "last_changed_by": "JERRYW",
+      "last_changed_date": "12/19/2014",
+      "last_changed_time": "15:57",
+      "category_name_spa": "",
+      "category_abbreviation_spa": ""
+    },
+    "10": {
+      "name": "MALAYSIA - TEAM LEADERS - ENG",
+      "active_status": "1",
+      "last_changed_by": "CHRISTIANS",
+      "last_changed_date": "01/26/2017",
+      "last_changed_time": "15:51",
+      "category_name_spa": "",
+      "category_abbreviation_spa": ""
+    },
+    "11": {
+      "name": "KANNAM CATEGORY",
+      "active_status": "1",
+      "last_changed_by": "KANNAMMAIV",
+      "last_changed_date": "11/15/2017",
+      "last_changed_time": "11:49",
+      "category_name_spa": "",
+      "category_abbreviation_spa": ""
+    },
+    "12": {
+      "name": "SPEAKER BUREAU 3",
+      "active_status": "1",
+      "last_changed_by": "SUEA",
+      "last_changed_date": "11/15/2017",
+      "last_changed_time": "15:00",
+      "category_name_spa": "",
+      "category_abbreviation_spa": ""
+    }
+  }
+}

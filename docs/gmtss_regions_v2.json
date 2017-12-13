@@ -1,0 +1,458 @@
+{
+  "_id": "gmtss_regions_v2",
+  "doc_type": "gmtss_config",
+  "site_type": {
+    "I": {
+      "site_country": {
+        "HKG": {
+          "region_count": 4,
+          "language_code": {
+            "ENG": {
+              "region_codes": {
+                "HONG_KONG_ISLAND": {
+                  "region": "Hong Kong Island",
+                  "state_count": 31,
+                  "state_codes": {
+                    "HKG*ABERDEEN": "Aberdeen",
+                    "HKG*ADMIRALTY": "Admiralty",
+                    "HKG*AP_LEI_CHAU": "Ap Lei Chau",
+                    "HKG*CAUSEWAY_BAY": "Causeway Bay",
+                    "HKG*CENTRAL": "Central",
+                    "HKG*CHAI_WAN": "Chai Wan",
+                    "HKG*DEEP_WATER_BAY": "Deep Water Bay",
+                    "HKG*FORTRESS_HILL": "Fortress Hill",
+                    "HKG*HAPPY_VALLEY": "Happy Valley",
+                    "HKG*HENG_FA_CHUEN": "Heng Fa Chuen",
+                    "HKG*KENNEDY_TOWN": "Kennedy Town",
+                    "HKG*MID-LEVELS": "Mid-levels",
+                    "HKG*NORTH_POINT": "North Point",
+                    "HKG*POK_FU_LAM": "Pok Fu Lam",
+                    "HKG*QUARRY_BAY": "Quarry Bay",
+                    "HKG*REPULSE_BAY": "Repulse Bay",
+                    "HKG*SAI_WAN": "Sai Wan",
+                    "HKG*SAI_WAN_HO": "Sai Wan Ho",
+                    "HKG*SAI_YING_PUN": "Sai Ying Pun",
+                    "HKG*SHAU_KEI_WAN": "Shau Kei Wan",
+                    "HKG*SHEK_O": "Shek O",
+                    "HKG*SHEUNG_WAN": "Sheung Wan",
+                    "HKG*SHOUSON_HILL": "Shouson Hill",
+                    "HKG*SIU_SAI_WAN": "Siu Sai Wan",
+                    "HKG*STANLEY": "Stanley",
+                    "HKG*TAI_KOO_SHING": "Tai Koo Shing",
+                    "HKG*THE_PEAK": "The Peak",
+                    "HKG*TIN_HAU": "Tin Hau",
+                    "HKG*WAH_FU": "Wah Fu",
+                    "HKG*WANCHAI": "Wanchai",
+                    "HKG*WONG_CHUK_HANG": "Wong Chuk Hang"
+                  }
+                },
+                "KOWLOON": {
+                  "region": "Kowloon",
+                  "state_count": 31,
+                  "state_codes": {
+                    "HKG*CHEUNG_SHA_WAN": "Cheung Sha Wan",
+                    "HKG*CHOI_HUNG": "Choi Hung",
+                    "HKG*DIAMOND_HILL": "Diamond Hill",
+                    "HKG*HO_MAN_TIN": "Ho Man Tin",
+                    "HKG*HUNG_HOM": "Hung Hom",
+                    "HKG*JORDAN": "Jordan",
+                    "HKG*KOWLOON": "Kowloon",
+                    "HKG*KOWLOON_BAY": "Kowloon Bay",
+                    "HKG*KOWLOON_CITY": "Kowloon City",
+                    "HKG*KOWLOON_TONG": "Kowloon Tong",
+                    "HKG*KWUN_TONG": "Kwun Tong",
+                    "HKG*LAI_CHI_KOK": "Lai Chi Kok",
+                    "HKG*LAI_KING": "Lai King",
+                    "HKG*LAM_TIN": "Lam Tin",
+                    "HKG*LEI_YUEN_MUN": "Lei Yuen Mun",
+                    "HKG*LOK_FU": "Lok Fu",
+                    "HKG*MEI_FOO": "Mei Foo",
+                    "HKG*MONGKOK": "Mongkok",
+                    "HKG*NGAU_TAU_KOK": "Ngau Tau Kok",
+                    "HKG*PRINCE_EDWARD": "Prince Edward",
+                    "HKG*SAU_MAU_PING": "Sau Mau Ping",
+                    "HKG*SHAM_SHUI_PO": "Sham Shui Po",
+                    "HKG*SHEK_KIP_MEI": "Shek Kip Mei",
+                    "HKG*TAI_KOK_TSUI": "Tai Kok Tsui",
+                    "HKG*TO_KWA_WAN": "To Kwa Wan",
+                    "HKG*TSIM_SHA_TSUI": "Tsim Sha Tsui",
+                    "HKG*TSIM_SHA_TSUI_EAST": "Tsim Sha Tsui East",
+                    "HKG*TSZ_WAN_SHAN": "Tsz Wan Shan",
+                    "HKG*WONG_TAI_SIN": "Wong Tai Sin",
+                    "HKG*YAU_MA_TEI": "Yau Ma Tei",
+                    "HKG*YAU_TONG": "Yau Tong "
+                  }
+                },
+                "LANTAU_ISLAND": {
+                  "region": "Lantau Island",
+                  "state_count": 5,
+                  "state_codes": {
+                    "HKG*CHEK_LAP_KOK ": "Chek Lap Kok",
+                    "HKG*DISCOVERY_BAY ": "Discovery Bay",
+                    "HKG*MUI_WO ": "Mui Wo",
+                    "HKG*TAI_O ": "Tai O",
+                    "HKG*TUNG_CHUNG ": "Tung Chung"
+                  }
+                },
+                "NEW_TERRITORIES": {
+                  "region": "New Territories",
+                  "state_count": 20,
+                  "state_codes": {
+                    "HKG*CLEAR_WATER_BAY": "Clear Water Bay",
+                    "HKG*FANLING": "Fanling",
+                    "HKG*FO_TAN": "Fo Tan",
+                    "HKG*KWAI_CHUNG": "Kwai Chung",
+                    "HKG*MA_ON_SHAN": "Ma On Shan",
+                    "HKG*MA_WAN": "Ma Wan",
+                    "HKG*SAI_KUNG": "Sai Kung",
+                    "HKG*SHA_TIN": "Sha Tin",
+                    "HKG*SHAM_TSENG": "Sham Tseng",
+                    "HKG*SHEUNG_SHUI": "Sheung Shui",
+                    "HKG*TAI_PO": "Tai Po",
+                    "HKG*TAI_WAI": "Tai Wai",
+                    "HKG*TAI_WO_HAU": "Tai Wo Hau",
+                    "HKG*TIN_SHUI_WAI": "Tin Shui Wai",
+                    "HKG*TSEUNG_KWAN_O": "Tseung Kwan O",
+                    "HKG*TSING_YI": "Tsing Yi",
+                    "HKG*TSUEN_WAN": "Tsuen Wan",
+                    "HKG*TUEN_MUN": "Tuen Mun",
+                    "HKG*WU_KAI_SHA": "Wu Kai Sha",
+                    "HKG*YUEN_LONG": "Yuen Long "
+                  }
+                }
+              }
+            }
+          }
+        },
+        "USA": {
+          "region_count": 8,
+          "language_code": {
+            "ENG": {
+              "region_codes": {
+                "1*USA": {
+                  "region": "USA - NORTHEAST",
+                  "state_count": 7,
+                  "state_codes": {
+                     "USA*CT": "CONNECTICUT",
+                     "USA*MA": "MASSACHUSETTS",
+                     "USA*ME": "MAINE",
+                     "USA*NH": "NEW HAMPSHIRE",
+                     "USA*NY": "NEW YORK",
+                     "USA*RI": "RHODE ISLAND",
+                     "USA*VT": "VERMONT"
+                  }
+                },
+                "2*USA": {
+                  "region": "USA - MIDEAST",
+                  "state_count": 9,
+                  "state_codes": {
+                    "USA*DC": "DISTRICT OF COLUMBIA",
+                    "USA*DE": "DELAWARE",
+                    "USA*KY": "KENTUCKY",
+                    "USA*MD": "MARYLAND",
+                    "USA*NJ": "NEW JERSEY",
+                    "USA*OH": "OHIO",
+                    "USA*PA": "PENNSYLVANIA",
+                    "USA*VA": "VIRGINIA",
+                    "USA*WV": "WEST VIRGINIA"
+                  }
+                },
+                "3*USA": {
+                  "region":"USA - SOUTHEAST",
+                  "state_count": 10,
+                  "state_codes": {
+                     "USA*AL": "ALABAMA",
+                     "USA*BS": "BAHAMAS",
+                     "USA*FL": "FLORIDA",
+                     "USA*GA": "GEORGIA",
+                     "USA*MS": "MISSISSIPPI",
+                     "USA*NC": "NORTH CAROLINA",
+                     "USA*PR": "PUERTO RICO",
+                     "USA*SC": "SOUTH CAROLINA",
+                     "USA*TN": "TENNESSEE",
+                     "USA*VI": "VIRGIN ISLANDS"
+                  }
+                },
+                "4*USA": {
+                  "region": "USA - NORTHERN",
+                  "state_count": 9,
+                  "state_codes": {
+                    "USA*IA": "IOWA",
+                    "USA*IL": "ILLINOIS",
+                    "USA*IN": "INDIANA",
+                    "USA*MI": "MICHIGAN",
+                    "USA*MN": "MINNESOTA",
+                    "USA*ND": "NORTH DAKOTA",
+                    "USA*NE": "NEBRASKA",
+                    "USA*SD": "SOUTH DAKOTA",
+                    "USA*WI": "WISCONSIN"
+                  }
+                },
+                "5*USA": {
+                  "region": "USA - SOUTHERN",
+                  "state_count": 8,
+                  "state_codes": {
+                    "USA*AR": "ARKANSAS",
+                    "USA*CO": "COLORADO",
+                    "USA*KS": "KANSAS",
+                    "USA*LA": "LOUISIANA",
+                    "USA*MO": "MISSOURI",
+                    "USA*NM": "NEW MEXICO",
+                    "USA*OK": "OKLAHOMA",
+                    "USA*TX": "TEXAS"
+                  }
+                },
+                "6*USA": {
+                  "region": "USA - WESTERN",
+                  "state_count": 12,
+                  "state_codes": {
+                    "USA*AK": "ALASKA",
+                    "USA*AZ": "ARIZONA",
+                    "USA*CA": "CALIFORNIA",
+                    "USA*GU": "GUAM",
+                    "USA*HI": "HAWAII",
+                    "USA*ID": "IDAHO",
+                    "USA*MT": "MONTANA",
+                    "USA*NV": "NEVADA",
+                    "USA*OR": "OREGON",
+                    "USA*UT": "UTAH",
+                    "USA*WA": "WASHINGTON",
+                    "USA*WY": "WYOMING"
+                  }
+                },
+                "CAN*CAN": {
+                  "region": "CAN - CANADIAN",
+                  "state_count": 14,
+                  "state_codes": {
+                    "CAN*AB": "ALBERTA",
+                    "CAN*BC": "BRITISH COLUMBIA",
+                    "CAN*MB": "MANITOBA",
+                    "CAN*NB": "NEW BRUNSWICK",
+                    "CAN*NL": "NEW FOUNDLAND",
+                    "CAN*NS": "NOVA SCOTIA",
+                    "CAN*NT": "NORTHWEST TERRITORIES",
+                    "CAN*NU": "NUNAVUT",
+                    "CAN*ON": "ONTARIO",
+                    "CAN*PE": "PRINCE EDWARD ISLAND",
+                    "CAN*QC": "QUEBEC",
+                    "CAN*SK": "SASKATCHEWAN",
+                    "CAN*YK": "YUKON TERRRITORY",
+                    "CAN*YT": "YUKON TERRITORY"
+                  }
+                },
+                "MEX*MEX": {
+                  "region": "MEX - MEXICO",
+                  "state_count": 32,
+                  "state_codes": {
+                    "MEX*BCN": "Baja California",
+                    "MEX*BCS": "Baja California Sur",
+                    "MEX*CAM": "Campeche",
+                    "MEX*CHH": "Chihuahua",
+                    "MEX*CHP": "Chiapas",
+                    "MEX*COA": "Coahuila",
+                    "MEX*COL": "Colima",
+                    "MEX*DIF": "Distrito Federal",
+                    "MEX*DUR": "Durango",
+                    "MEX*GRO": "Guerrero",
+                    "MEX*GUA": "Guanajuato",
+                    "MEX*HID": "Hidalgo",
+                    "MEX*JAL": "Jalisco",
+                    "MEX*MEX": "MÃ©xico State",
+                    "MEX*MIC": "MichoacÃ¡n",
+                    "MEX*MOR": "Morelos",
+                    "MEX*NAY": "Nayarit",
+                    "MEX*NLE": "Nuevo LeÃ³n",
+                    "MEX*OAX": "Oaxaca",
+                    "MEX*PUE": "Puebla",
+                    "MEX*QUE": "QuerÃ©taro",
+                    "MEX*ROO": "Quintana Roo",
+                    "MEX*SIN": "Sinaloa",
+                    "MEX*SLP": "San Luis PotosÃ­",
+                    "MEX*SON": "Sonora",
+                    "MEX*TAB": "Tabasco",
+                    "MEX*TAM": "Tamaulipas",
+                    "MEX*TLA": "Tlaxcala",
+                    "MEX*VER": "Veracruz",
+                    "MEX*YUC": "YucatÃ¡n",
+                    "MEX*ZAC": "Zacatecas"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "ESP": {
+          "region_count": 2,
+          "language_code": {
+            "ENG": {
+              "region_codes": {
+                "CAR*ESP": {
+                  "region": "Spain - Canary Islands",
+                  "state_count": 2,
+                  "state_codes": {
+                    "ESP*GC": "Las Palmas",
+                    "ESP*TF": "Santa Cruz de Tenerife"
+                  }
+                },
+                "ESP*ESP": {
+                  "region": "Spain - Mainland",
+                  "state_count": 48,
+                  "state_codes": {
+                    "ESP*A": "Alicante",
+                    "ESP*AB": "Albacete",
+                    "ESP*AL": "Almería",
+                    "ESP*AV": "Álava",
+                    "ESP*B": "Barcelona",
+                    "ESP*BA": "Badajoz",
+                    "ESP*BI": "Vizcaya",
+                    "ESP*BU": "Burgos",
+                    "ESP*C": "A Coruña",
+                    "ESP*CA": "Cádiz",
+                    "ESP*CC": "Cáceres",
+                    "ESP*CO": "Córdoba",
+                    "ESP*CR": "Ciudad Real",
+                    "ESP*CS": "Castellón",
+                    "ESP*CU": "Cuenca",
+                    "ESP*GI": "Girona",
+                    "ESP*GR": "Granada",
+                    "ESP*GU": "Guadalajara",
+                    "ESP*H": "Huelva",
+                    "ESP*HU": "Huesca",
+                    "ESP*J": "Jaén",
+                    "ESP*L": "Lleida",
+                    "ESP*LE": "León",
+                    "ESP*LO": "La Rioja",
+                    "ESP*LU": "Lugo",
+                    "ESP*M": "Madrid",
+                    "ESP*MA": "MÃ¡laga",
+                    "ESP*MU": "Murcia",
+                    "ESP*NA": "Navarra",
+                    "ESP*O": "Asturias",
+                    "ESP*OR": "Ourense",
+                    "ESP*P": "Palencia",
+                    "ESP*PM": "Balears",
+                    "ESP*PO": "Pontevedra",
+                    "ESP*S": "Cantabria",
+                    "ESP*SA": "Salamanca",
+                    "ESP*SE": "Sevilla",
+                    "ESP*SG": "Segovia",
+                    "ESP*SO": "Soria",
+                    "ESP*SS": "Guipuzcoa",
+                    "ESP*T": "Tarragona",
+                    "ESP*TE": "Teruel",
+                    "ESP*TO": "Toledo",
+                    "ESP*V": "Valencia",
+                    "ESP*VA": "Valladolid",
+                    "ESP*VI": "Alava",
+                    "ESP*Z": "Zaragoza",
+                    "ESP*ZA": "Zamora"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "AUS": {
+          "region_count": 1,
+          "language_code": {
+            "ENG": {
+              "region_codes": {
+                "AUS*AUS": {
+                  "region": "Australia",
+                  "state_count": 8,
+                  "state_codes": {
+                    "AUS*ACT": "Australian Capital Territory",
+                    "AUS*NSW": "New South Wales",
+                    "AUS*NT": "Northwest Territory",
+                    "AUS*QLD": "Queensland",
+                    "AUS*SA": "South Australia",
+                    "AUS*TAS": "Tasmania",
+                    "AUS*VIC": "Victoria",
+                    "AUS*WAA": "Western Australia"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "GBR": {
+          "region_count": 1,
+          "language_code": {
+            "ENG": {
+              "region_codes": {
+                "GBR*GBR": {
+                  "region": "United Kingdom",
+                  "state_count": 0,
+                  "state_codes": {}
+                }
+              }
+            }
+          }
+        },
+        "TWN": {
+          "region_count": 1,
+          "language_code": {
+            "ENG": {
+              "region_codes": {
+                "TWN*TWN": {
+                  "region": "Taiwan",
+                  "state_count": 3,
+                  "state_codes": {
+                    "C*TWN": "Central",
+                    "N*TWN": "North",
+                    "S*TWN": "South"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "SGP": {
+          "region_count": 1,
+          "language_code": {
+            "ENG": {
+              "region_codes": {
+                "SGP*SGP": {
+                  "region": "Singapore",
+                  "state_count": 0,
+                  "state_codes": {}
+                }
+              }
+            }
+          }
+        },
+        "MYS": {
+          "region_count": 1,
+          "language_code": {
+            "ENG": {
+              "region_codes": {
+                "MYS*MYS": {
+                  "region": "Malaysia",
+                  "state_count": 16,
+                  "state_codes": {
+                    "MYS*JHR": "Johor",
+                    "MYS*KDH": "Kedah",
+                    "MYS*KTN": "Kelantan",
+                    "MYS*KUL": "Kuala Lumpur",
+                    "MYS*LBN": "Labuan",
+                    "MYS*MLK": "Melaka",
+                    "MYS*NSN": "Negeri Sembila",
+                    "MYS*PHG": "Pahang",
+                    "MYS*PJY": "Putrajaya",
+                    "MYS*PLS": "Perlis",
+                    "MYS*PNG": "Pulua Pinang",
+                    "MYS*PRK": "Perak",
+                    "MYS*SBH": "Sabah",
+                    "MYS*SGR": "Selangor",
+                    "MYS*SWK": "Sarawak",
+                    "MYS*TRG": "Terengganu"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
