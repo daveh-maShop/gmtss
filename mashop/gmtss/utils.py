@@ -1,7 +1,7 @@
 def rbo_results2dict(rbo_properties, cm):
     #TODO: convert smv items
     """
-    Takes a dictionary of rbo_properites (key:value (sv, mv & svm) and a conversion map (cm) and convert:
+    Takes a dictionary of rbo_properites (key:value (sv, mv & svm) and a conversion map (cm) and converts:
         1. single value rbo properties to a simple key:value (converting string to json type as indicated in the cm
         2. groups of associated multi-value properties based on the structure in the cm (convertibg string to json
                type as indicated in the cm)
