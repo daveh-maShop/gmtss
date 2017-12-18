@@ -7,6 +7,7 @@ def rbo_results2dict(rbo_properties, cm):
                type as indicated in the cm)
     """
     rbo_vm = 'ý'
+    rbo_svm = 'ü'
     cd = {}  # converted data to be returned
     for key in cm['sv']:
         # note: the eval funtion will evaluate a '12/12/17' as a math division and not as a string
@@ -14,6 +15,7 @@ def rbo_results2dict(rbo_properties, cm):
             cd[key] = eval(cm['sv'][key]['json_type'] + '(' + rbo_properties[cm['sv'][key]['rbo_name']] + ')')
         else:
             cd[key] = rbo_properties[cm['sv'][key]['rbo_name']]
+
 
     for group_master_key in cm['mv_groups']:
         uv_values = {}

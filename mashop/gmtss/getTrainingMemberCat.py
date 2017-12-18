@@ -16,6 +16,8 @@ body = '{"siteCountry": "", "siteType": "U", "langCode": "ENG", "categoryID": ""
 rbo_results = rbo.call(host, port, base_resource, rbo_module, rbo_class, rbo_method, body)
 rbo_properties = rbo_results['results']['results']
 pp.pprint(rbo_properties)
+
+#TODO can we automate this??? should we???
 conversion_map = {}
 conversion_map['sv'] = {'member_cat_count': {'rbo_name': 'memberCatCnt', 'json_type': 'int'}}
 conversion_map['mv_groups'] = {'category_id': {'rbo_name': 'categoryID', 'json_type': 'str',
