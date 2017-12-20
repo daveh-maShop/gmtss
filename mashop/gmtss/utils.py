@@ -1,5 +1,5 @@
 def rbo_results2dict(rbo_properties, cm):
-    #TODO: convert smv items
+    # TODO: convert smv items
     """
     Takes a dictionary of rbo_properites (key:value (sv, mv & svm) and a conversion map (cm) and converts:
         1. single value rbo properties to a simple key:value (converting string to json type as indicated in the cm
@@ -19,29 +19,27 @@ def rbo_results2dict(rbo_properties, cm):
     # convert @vm dynamic arrays to python lists for each rbo property
     for group_master_key in cm['mv_groups']:
         uv_values = {}
-        uv_values[group_master_key] = rbo_properties[cm['mv_groups'][group_master_key]['rbo_name']]\
+        uv_values[group_master_key] = rbo_properties[cm['mv_groups'][group_master_key]['rbo_name']] \
             .split(rbo_vm)
         for assoc_item_key in cm['mv_groups'][group_master_key]['associations']:
             uv_values[assoc_item_key] = rbo_properties[cm['mv_groups'][group_master_key]['associations']
-                                                         [assoc_item_key]['rbo_name']].split(rbo_vm)
+            [assoc_item_key]['rbo_name']].split(rbo_vm)
         cd[group_master_key] = {}
-
-        pass_counter = 0
-
         for i, val in enumerate(uv_values[group_master_key]):
-            pass_counter += 1
-            print(pass_counter)
             group_master_key_val = str(uv_values[group_master_key][i])
             cd[group_master_key][group_master_key_val] = {}
             for assoc_item_key in cm['mv_groups'][group_master_key]['associations']:
+                # does this associated key have any associated sub values?
+                # if so then using the base rbo_property assign this rbo_property's values as kv pairs under
+                # this associated item.  (huh???????  :)  )
                 if 'associations' in cm['mv_groups'][group_master_key]['associations'][assoc_item_key]:
                     cd[group_master_key][group_master_key_val][assoc_item_key] = {}
-                    keys_from_uv_property = rbo_properties[cm['mv_groups'][group_master_key]['associations'][assoc_item_key]['associations']['rbo_name']].split(rbo_vm)
+                    keys_from_uv_property = rbo_properties[
+                        cm['mv_groups'][group_master_key]['associations'][assoc_item_key]['associations'][
+                            'rbo_name']].split(rbo_vm)
                     for keyj, valj in enumerate(keys_from_uv_property):
                         sub_values = uv_values[assoc_item_key][i].split(rbo_svm)
                         cd[group_master_key][group_master_key_val][assoc_item_key][valj] = sub_values[keyj]
-
-
                 else:
                     uv = uv_values[assoc_item_key][i]
                     jt = cm['mv_groups'][group_master_key]['associations'][assoc_item_key]['json_type']
