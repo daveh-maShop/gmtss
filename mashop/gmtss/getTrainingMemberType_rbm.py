@@ -15,7 +15,9 @@ rbo_class = 'NMTSS'
 rbo_method = 'getTrainingMemberType'
 body = '{"siteCountry": "", "siteType": "I", "langCode": "ENG"}'
 rbo_results = rbo.call(host, port, base_resource, rbo_module, rbo_class, rbo_method, body)
+pp.pprint(rbo_results)
 rbo_properties = rbo_results['results']['results']
+
 
 conversion_map = {}
 conversion_map['sv'] = {'country_count': {'rbo_name': 'countryCnt', 'json_type': 'int'},
@@ -30,4 +32,5 @@ conversion_map['mv_groups'] = {'member_type_id': {'rbo_name': 'memberTypeID', 'j
                                                                               'associations': {'rbo_name': 'country'}}
                                                   }}}
 result = rbo_results2dict(rbo_properties, conversion_map)
+print('----------------------------')
 pp.pprint(result)
