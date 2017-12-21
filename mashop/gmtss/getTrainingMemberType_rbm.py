@@ -27,9 +27,22 @@ conversion_map['mv_groups'] = {'member_type_id': {'rbo_name': 'memberTypeID', 'j
                                                   'associations': {
                                                       'member_name': {'rbo_name': 'memberName', 'json_type': 'str'},
                                                       'category': {'rbo_name': 'category', 'json_type': 'str'},
+                                                      'display_pin': {'rbo_name': 'displayPin', 'json_type': 'str'},
+                                                      'expiration_length': {'rbo_name': 'expirationLength',
+                                                                            'json_type': 'str'},
+                                                      'history_date': {'rbo_name': 'histDate', 'json_type': 'str'},
+                                                      'history_time': {'rbo_name': 'histTime', 'json_type': 'str'},
+                                                      'history_name': {'rbo_name': 'histName', 'json_type': 'str'},
                                                       'is_country_selected': {'rbo_name': 'isCountrySelected',
                                                                               'json_type': 'str',
-                                                                              'associations': {'rbo_name': 'country'}}
+                                                                              'associations': {'rbo_name': 'country'}},
+                                                      'show_in_search': {'rbo_name': 'showInSearch',
+                                                                         'json_type': 'str'},
+                                                      'type_abbreviation': {'rbo_name': 'typeAbbrev',
+                                                                            'json_type': 'str'},
+                                                      'type_abbreviation_SPA': {'rbo_name': 'typeAbbrevSPA',
+                                                                                'json_type': 'str'},
+                                                      'type_name_SPA': {'rbo_name': 'typeNameSPA', 'json_type': 'str'}
                                                   }}}
 result = rbo_results2dict(rbo_properties, conversion_map)
 print('----------------------------')

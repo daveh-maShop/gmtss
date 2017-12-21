@@ -1,10 +1,10 @@
 def rbo_results2dict(rbo_properties, cm):
-    # TODO: convert smv items
     """
     Takes a dictionary of rbo_properites (key:value (sv, mv & svm) and a conversion map (cm) and converts:
         1. single value rbo properties to a simple key:value (converting string to json type as indicated in the cm
         2. groups of associated multi-value properties based on the structure in the cm (convertibg string to json
                type as indicated in the cm)
+        3. sub groups of associated sub-value properties for a given multi-value based on the structure in the cm
     """
     rbo_vm = 'ý'
     rbo_svm = 'ü'
@@ -39,6 +39,7 @@ def rbo_results2dict(rbo_properties, cm):
                             'rbo_name']].split(rbo_vm)
                     for keyj, valj in enumerate(keys_from_uv_property):
                         sub_values = uv_values[assoc_item_key][i].split(rbo_svm)
+                        #TODO: cast rbo values (strings) to json_types as indicated in the cm
                         cd[group_master_key][group_master_key_val][assoc_item_key][valj] = sub_values[keyj]
                 else:
                     uv = uv_values[assoc_item_key][i]
