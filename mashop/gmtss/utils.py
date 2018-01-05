@@ -25,10 +25,10 @@ def rbo_results2dict(rbo_properties, cm):
             uv_values[assoc_item_key] = rbo_properties[cm['mv_groups'][group_master_key]
             [assoc_item_key]['rbo_name']].split(rbo_vm)
         cd[group_master_key] = []
-        group_dict = {}
         for i, val in enumerate(uv_values[group_master_key]):
             # group_master_key_val = str(uv_values[group_master_key][i])
             # cd[group_master_key][group_master_key_val] = {}
+            group_dict = {}
             for assoc_item_key in cm['mv_groups'][group_master_key]:
                 # does this associated key have any associated sub values?
                 # if so then using the base rbo_property assign this rbo_property's values as kv pairs under
@@ -51,5 +51,5 @@ def rbo_results2dict(rbo_properties, cm):
                         group_dict[assoc_item_key] = json_type_value
                     else:
                         group_dict[assoc_item_key] = uv_values[assoc_item_key][i]
-            cd[group_master_key].append(group_dict)
+            cd[group_master_key].insert(i-1, group_dict)
     return cd
