@@ -1,4 +1,3 @@
-import json
 import pprint
 
 from mashop.gmtss.da_cb import get_bucket, upsert
@@ -25,21 +24,34 @@ upsert(bucket, v1_doc['_id'], v1_doc)
 rbo_properties = v1_doc['dsb_payload']['results']['results']
 pp.pprint(v1_doc)
 
+# conversion_map = {}
+# conversion_map['sv'] = {'member_cat_count': {'rbo_name': 'memberCatCnt', 'json_type': 'int'}}
+# conversion_map['mv_groups'] = {'category_id': {'rbo_name': 'categoryID', 'json_type': 'str',
+#                                                'associations': {
+#                                                    'active_status': {'rbo_name': 'activeStatus', 'json_type': 'int'},
+#                                                    'hist_name': {'rbo_name': 'histName', 'json_type': 'str'},
+#                                                    'hist_date': {'rbo_name': 'histDate', 'json_type': 'str'},
+#                                                    'hist_time': {'rbo_name': 'histTime', 'json_type': 'str'},
+#                                                    'cat_abbrev': {'rbo_name': 'catAbbrev', 'json_type': 'str'},
+#                                                    'cat_name_SPA': {'rbo_name': 'catNameSPA', 'json_type': 'str'},
+#                                                    'cat_abbrev_SPA': {'rbo_name': 'catAbbrevSPA', 'json_type': 'str'}
+#                                                }
+#                                                }
+#                                }
+
+# associations as array
 conversion_map = {}
 conversion_map['sv'] = {'member_cat_count': {'rbo_name': 'memberCatCnt', 'json_type': 'int'}}
-conversion_map['mv_groups'] = {'category_id': {'rbo_name': 'categoryID', 'json_type': 'str',
-                                               'associations': {
-                                                   'active_status': {'rbo_name': 'activeStatus', 'json_type': 'int'},
-                                                   'hist_name': {'rbo_name': 'histName', 'json_type': 'str'},
-                                                   'hist_date': {'rbo_name': 'histDate', 'json_type': 'str'},
-                                                   'hist_time': {'rbo_name': 'histTime', 'json_type': 'str'},
-                                                   'cat_abbrev': {'rbo_name': 'catAbbrev', 'json_type': 'str'},
-                                                   'cat_name_SPA': {'rbo_name': 'catNameSPA', 'json_type': 'str'},
-                                                   'cat_abbrev_SPA': {'rbo_name': 'catAbbrevSPA', 'json_type': 'str'}
-                                               }
+conversion_map['mv_groups'] = {'category_id': {'category_id': {'rbo_name': 'categoryID', 'json_type': 'int'},
+                                               'active_status': {'rbo_name': 'activeStatus', 'json_type': 'int'},
+                                               'hist_name': {'rbo_name': 'histName', 'json_type': 'str'},
+                                               'hist_date': {'rbo_name': 'histDate', 'json_type': 'str'},
+                                               'hist_time': {'rbo_name': 'histTime', 'json_type': 'str'},
+                                               'cat_abbrev': {'rbo_name': 'catAbbrev', 'json_type': 'str'},
+                                               'cat_name_SPA': {'rbo_name': 'catNameSPA', 'json_type': 'str'},
+                                               'cat_abbrev_SPA': {'rbo_name': 'catAbbrevSPA', 'json_type': 'str'}
                                                }
                                }
-
 result = rbo_results2dict(rbo_properties, conversion_map)
 result['doc_type'] = 'gmtss_member_categories'
 result['_id'] = 'gmtss_v2_member_categories'

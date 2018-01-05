@@ -19,20 +19,21 @@ def rbo_results2dict(rbo_properties, cm):
     # convert @vm dynamic arrays to python lists for each rbo property
     for group_master_key in cm['mv_groups']:
         uv_values = {}
-        uv_values[group_master_key] = rbo_properties[cm['mv_groups'][group_master_key]['rbo_name']] \
-            .split(rbo_vm)
-        for assoc_item_key in cm['mv_groups'][group_master_key]['associations']:
-            uv_values[assoc_item_key] = rbo_properties[cm['mv_groups'][group_master_key]['associations']
+        # uv_values[group_master_key] = rbo_properties[cm['mv_groups'][group_master_key]['rbo_name']] \
+        #     .split(rbo_vm)
+        for assoc_item_key in cm['mv_groups'][group_master_key]:
+            uv_values[assoc_item_key] = rbo_properties[cm['mv_groups'][group_master_key]
             [assoc_item_key]['rbo_name']].split(rbo_vm)
-        cd[group_master_key] = {}
+        cd[group_master_key] = []
+        group_dict = {}
         for i, val in enumerate(uv_values[group_master_key]):
-            group_master_key_val = str(uv_values[group_master_key][i])
-            cd[group_master_key][group_master_key_val] = {}
-            for assoc_item_key in cm['mv_groups'][group_master_key]['associations']:
+            # group_master_key_val = str(uv_values[group_master_key][i])
+            # cd[group_master_key][group_master_key_val] = {}
+            for assoc_item_key in cm['mv_groups'][group_master_key]:
                 # does this associated key have any associated sub values?
                 # if so then using the base rbo_property assign this rbo_property's values as kv pairs under
                 # this associated item.  (huh???????  :)  )
-                if 'associations' in cm['mv_groups'][group_master_key]['associations'][assoc_item_key]:
+                if 'associations' in cm['mv_groups'][group_master_key][assoc_item_key]:
                     cd[group_master_key][group_master_key_val][assoc_item_key] = {}
                     keys_from_uv_property = rbo_properties[
                         cm['mv_groups'][group_master_key]['associations'][assoc_item_key]['associations'][
@@ -43,11 +44,12 @@ def rbo_results2dict(rbo_properties, cm):
                         cd[group_master_key][group_master_key_val][assoc_item_key][valj] = sub_values[keyj]
                 else:
                     uv = uv_values[assoc_item_key][i]
-                    jt = cm['mv_groups'][group_master_key]['associations'][assoc_item_key]['json_type']
-                    if cm['mv_groups'][group_master_key]['associations'][assoc_item_key]['json_type'] != 'str':
+                    jt = cm['mv_groups'][group_master_key][assoc_item_key]['json_type']
+                    if cm['mv_groups'][group_master_key][assoc_item_key]['json_type'] != 'str':
                         # note: the eval funtion will evaluate a '12/12/17' as a math division and not as a string
                         json_type_value = eval(jt + '(' + uv_values[assoc_item_key][i] + ')')
-                        cd[group_master_key][group_master_key_val][assoc_item_key] = json_type_value
+                        group_dict[assoc_item_key] = json_type_value
                     else:
-                        cd[group_master_key][group_master_key_val][assoc_item_key] = uv_values[assoc_item_key][i]
+                        group_dict[assoc_item_key] = uv_values[assoc_item_key][i]
+            cd[group_master_key].append(group_dict)
     return cd
