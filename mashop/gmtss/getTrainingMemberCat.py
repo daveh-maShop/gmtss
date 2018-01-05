@@ -1,10 +1,14 @@
+import json
 import pprint
 
-from utils import rbo_results2dict
+from mashop.gmtss.da_cb import get_bucket, upsert
+from mashop.gmtss.utils import rbo_results2dict
 from mashop.gmtss.webde import WebDE
+
 pp = pprint.PrettyPrinter(depth=6, indent=4)
 
 rbo = WebDE()
+bucket = get_bucket('dev_MotherBucket')
 
 host = 'http://dev-dsb.marketamerica.com'
 port = '80'
@@ -13,11 +17,14 @@ rbo_module = 'TRAINING'
 rbo_class = 'NMTSS'
 rbo_method = 'getTrainingMemberCat'
 body = '{"siteCountry": "", "siteType": "U", "langCode": "ENG", "categoryID": ""}'
-rbo_results = rbo.call(host, port, base_resource, rbo_module, rbo_class, rbo_method, body)
-rbo_properties = rbo_results['results']['results']
-pp.pprint(rbo_properties)
+# rbo_results = rbo.call(host, port, base_resource, rbo_module, rbo_class, rbo_method, body)
+v1_doc = {'_id': 'gmtss_v1_member_categories', 'doc_type': 'gmtss_v1_member_categories', 'version': '1.0'}
+v1_doc['dsb_payload'] = rbo.call(host, port, base_resource, rbo_module, rbo_class, rbo_method, body)
+upsert(bucket, v1_doc['_id'], v1_doc)
 
-#TODO can we automate this??? should we???
+rbo_properties = v1_doc['dsb_payload']['results']['results']
+pp.pprint(v1_doc)
+
 conversion_map = {}
 conversion_map['sv'] = {'member_cat_count': {'rbo_name': 'memberCatCnt', 'json_type': 'int'}}
 conversion_map['mv_groups'] = {'category_id': {'rbo_name': 'categoryID', 'json_type': 'str',
@@ -34,4 +41,8 @@ conversion_map['mv_groups'] = {'category_id': {'rbo_name': 'categoryID', 'json_t
                                }
 
 result = rbo_results2dict(rbo_properties, conversion_map)
+result['doc_type'] = 'gmtss_member_categories'
+result['_id'] = 'gmtss_v2_member_categories'
+result['version'] = '2.0'
+upsert(bucket, result['_id'], result)
 pp.pprint(result)
