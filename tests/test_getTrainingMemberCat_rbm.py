@@ -1,6 +1,6 @@
 import unittest
 
-from mashop.gmtss import getTrainingMemberCat
+from mashop.scratch import getTrainingMemberCat
 
 
 class GetTrainingMemberCat(unittest.TestCase):

@@ -23,7 +23,7 @@ def rbo_results2dict(rbo_properties, cm):
         #     .split(rbo_vm)
         for assoc_item_key in cm['mv_groups'][group_master_key]:
             uv_values[assoc_item_key] = rbo_properties[cm['mv_groups'][group_master_key]
-            [assoc_item_key]['rbo_name']].split(rbo_vm)
+                                                       [assoc_item_key]['rbo_name']].split(rbo_vm)
         cd[group_master_key] = []
         for i, val in enumerate(uv_values[group_master_key]):
             # group_master_key_val = str(uv_values[group_master_key][i])
@@ -34,16 +34,17 @@ def rbo_results2dict(rbo_properties, cm):
                 # if so then using the base rbo_property assign this rbo_property's values as kv pairs under
                 # this associated item.  (huh???????  :)  )
                 if 'associations' in cm['mv_groups'][group_master_key][assoc_item_key]:
-                    cd[group_master_key][group_master_key_val][assoc_item_key] = {}
+                    group_dict[assoc_item_key] = {}
                     keys_from_uv_property = rbo_properties[
-                        cm['mv_groups'][group_master_key]['associations'][assoc_item_key]['associations'][
+                        cm['mv_groups'][group_master_key][assoc_item_key]['associations'][
                             'rbo_name']].split(rbo_vm)
+                    jt = cm['mv_groups'][group_master_key][assoc_item_key]['json_type']
                     for keyj, valj in enumerate(keys_from_uv_property):
                         sub_values = uv_values[assoc_item_key][i].split(rbo_svm)
-                        #TODO: cast rbo values (strings) to json_types as indicated in the cm
-                        cd[group_master_key][group_master_key_val][assoc_item_key][valj] = sub_values[keyj]
+                        json_type_value = eval(jt + '(' + sub_values[keyj] + ')')
+                        # group_dict[assoc_item_key][valj] = sub_values[keyj]
+                        group_dict[assoc_item_key][valj] = json_type_value
                 else:
-                    uv = uv_values[assoc_item_key][i]
                     jt = cm['mv_groups'][group_master_key][assoc_item_key]['json_type']
                     if cm['mv_groups'][group_master_key][assoc_item_key]['json_type'] != 'str':
                         # note: the eval funtion will evaluate a '12/12/17' as a math division and not as a string
@@ -51,5 +52,5 @@ def rbo_results2dict(rbo_properties, cm):
                         group_dict[assoc_item_key] = json_type_value
                     else:
                         group_dict[assoc_item_key] = uv_values[assoc_item_key][i]
-            cd[group_master_key].insert(i-1, group_dict)
+            cd[group_master_key].insert(i, group_dict)
     return cd
